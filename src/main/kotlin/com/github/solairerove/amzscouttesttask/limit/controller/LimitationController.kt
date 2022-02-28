@@ -17,7 +17,7 @@ class LimitationController(private val limitationService: LimitationService) {
         limitationService.limit(
             LimitationRequest(
                 time = Instant.now(),
-                hostname = req.remoteAddr
+                hostname = req.getHeader("Host") ?: req.remoteAddr
             )
         )
     }
