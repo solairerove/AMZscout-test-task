@@ -12,3 +12,8 @@ Java version: 11.0.13, vendor: Azul Systems, Inc., runtime: /Users/nikita.krivit
 Default locale: en_RU, platform encoding: UTF-8
 OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
 ```
+
+# Build
+```shell
+mvn clean install && java -jar target/amzscout-test-task-0.0.1-SNAPSHOT.jar
+```
