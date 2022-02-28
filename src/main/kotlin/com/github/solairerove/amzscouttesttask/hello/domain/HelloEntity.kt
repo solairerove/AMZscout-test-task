@@ -1,4 +1,4 @@
-package com.github.solairerove.amzscouttesttask.domain
+package com.github.solairerove.amzscouttesttask.hello.domain
 
 import java.time.Instant
 

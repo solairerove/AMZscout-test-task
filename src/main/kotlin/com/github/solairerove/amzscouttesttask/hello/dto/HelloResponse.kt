@@ -1,7 +1,7 @@
-package com.github.solairerove.amzscouttesttask.dto
+package com.github.solairerove.amzscouttesttask.hello.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.github.solairerove.amzscouttesttask.domain.HelloEntity
+import com.github.solairerove.amzscouttesttask.hello.domain.HelloEntity
 import java.time.Instant
 
 data class HelloResponse(

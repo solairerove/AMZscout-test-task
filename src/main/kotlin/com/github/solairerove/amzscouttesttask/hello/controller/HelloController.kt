@@ -1,8 +1,8 @@
-package com.github.solairerove.amzscouttesttask.controller
+package com.github.solairerove.amzscouttesttask.hello.controller
 
-import com.github.solairerove.amzscouttesttask.dto.HelloResponse
-import com.github.solairerove.amzscouttesttask.dto.toDto
-import com.github.solairerove.amzscouttesttask.service.HelloService
+import com.github.solairerove.amzscouttesttask.hello.dto.HelloResponse
+import com.github.solairerove.amzscouttesttask.hello.dto.toDto
+import com.github.solairerove.amzscouttesttask.hello.service.HelloService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

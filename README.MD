@@ -17,3 +17,7 @@ OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
 ```shell
 mvn clean install && java -jar target/amzscout-test-task-0.0.1-SNAPSHOT.jar
 ```
+
+# Endpoints
+http://localhost:8080/api/v1/hello
+http://localhost:8080/api/v1/limitation
