@@ -1,5 +1,6 @@
 package com.github.solairerove.amzscouttesttask
 
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
@@ -60,22 +61,22 @@ class ApplicationTest {
         runBlocking {
             coroutineScope {
                 awaitAll(
-                    async {
+                    async(Dispatchers.Default) {
                         mockMvc.get("/api/v1/limitation") {
                             header("Host", "bad-gateway-async")
                         }.andExpect { status { status().isOk } }
                     },
-                    async {
+                    async(Dispatchers.Default) {
                         mockMvc.get("/api/v1/limitation") {
                             header("Host", "bad-gateway-async")
                         }.andExpect { status { status().isOk } }
                     },
-                    async {
+                    async(Dispatchers.Default) {
                         mockMvc.get("/api/v1/limitation") {
                             header("Host", "bad-gateway-async")
                         }.andExpect { status { status().isOk } }
                     },
-                    async {
+                    async(Dispatchers.Default) {
                         mockMvc.get("/api/v1/limitation") {
                             header("Host", "bad-gateway-async")
                         }.andExpect { status { status().isBadGateway } }

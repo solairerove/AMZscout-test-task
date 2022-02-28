@@ -5,10 +5,10 @@ import com.github.solairerove.amzscouttesttask.limit.exception.LimitationExcepti
 import com.github.solairerove.amzscouttesttask.limit.properties.ApplicationProperties
 import org.springframework.stereotype.Service
 import java.time.Instant
+import java.util.Collections.synchronizedMap
 
 // hostname to list of instant time
-// должна быть синхронизирована
-val cache = mutableMapOf<String, MutableList<Instant>>()
+val cache: MutableMap<String, MutableList<Instant>> = synchronizedMap(mutableMapOf<String, MutableList<Instant>>())
 
 @Service
 class DefaultLimitationService(
