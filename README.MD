@@ -18,6 +18,19 @@ OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
 mvn clean install && java -jar target/amzscout-test-task-0.0.1-SNAPSHOT.jar
 ```
 
+# Docker build
+```shell
+docker build -t limiter .
+docker run -dp 8080:8080 limiter:latest
+docker logs -f container_name
+```
+
 # Endpoints
 http://localhost:8080/api/v1/hello
 http://localhost:8080/api/v1/limitation
+
+# Notes
+- не использовал градл, потому что презираю его. но если он есть на проекте я ок
+- почему не джава, потому что воспользовался правилом "Возможны другие вспомогательные библиотеки."
+- почему не жэюнит, потому что пункт 2
+- 
