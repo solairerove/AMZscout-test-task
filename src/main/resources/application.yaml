@@ -6,5 +6,5 @@ spring:
     name: "amz-scout-test-task"
 
 amz.scout:
-  timeout.limit-time: "3m"
-  limit-count: 5
+  timeout.limit-time: "1m"
+  limit-count: 3

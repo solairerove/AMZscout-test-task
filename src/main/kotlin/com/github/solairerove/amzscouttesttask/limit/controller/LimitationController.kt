@@ -6,17 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import java.time.Instant
+import javax.servlet.http.HttpServletRequest
 
 @RestController
 @RequestMapping("/api/v1/limitation")
 class LimitationController(private val limitationService: LimitationService) {
 
     @GetMapping
-    fun requestLimit() {
+    fun requestLimit(req: HttpServletRequest) {
         limitationService.limit(
             LimitationRequest(
                 time = Instant.now(),
-                hostname = ""
+                hostname = req.remoteAddr
             )
         )
     }
